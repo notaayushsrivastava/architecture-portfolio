@@ -18,17 +18,17 @@ export function Navigation() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-4 sm:pt-6 px-4 pointer-events-none">
       <div className="w-full max-w-5xl bg-white/85 backdrop-blur-md border border-black/5 shadow-sm rounded-full py-2.5 px-4 sm:px-6 flex items-center justify-between pointer-events-auto transition-all duration-300">
-        {/* Brand Wordmark */}
+        {/* Brand Wordmark & Inverted Monogram 'A' */}
         <Link
           href="/"
-          className="flex items-center gap-2 group focus:outline-none"
-          aria-label="Elena Vance Architecture Atelier"
+          className="flex items-center gap-2.5 group focus:outline-none"
+          aria-label="Aayush Srivastava Architecture Atelier"
         >
-          <div className="w-7 h-7 rounded-full bg-ink-primary flex items-center justify-center text-white font-bold text-xs tracking-tighter group-hover:scale-105 transition-transform">
-            V
+          <div className="w-7 h-7 rounded-full bg-ink-primary flex items-center justify-center text-white font-extrabold text-xs tracking-tight group-hover:scale-105 transition-transform shadow-xs">
+            A
           </div>
           <span className="font-extrabold text-sm sm:text-base tracking-tight text-ink-primary uppercase">
-            Vale<span className="text-ink-two-tone font-medium">.Arch</span>
+            Aayush<span className="text-ink-two-tone font-medium">.Arch</span>
           </span>
         </Link>
 
@@ -76,7 +76,6 @@ export function Navigation() {
           </button>
         </div>
       </div>
-
 
       {/* Mobile Drawer Overlay */}
       {mobileMenuOpen && (

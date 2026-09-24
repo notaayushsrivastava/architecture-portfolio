@@ -18,25 +18,27 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Elena Vance — Architecture Atelier | Modern & Sustainable Designs',
+  title: 'Aayush Srivastava — Architecture Portfolio | B.Arch (VIT Vellore)',
   description:
-    'Innovative contemporary architecture atelier by Elena Vance specializing in modern, sustainable residential sanctuaries, cultural pavilions, and tectonic forms.',
+    'Architecture portfolio of Aayush Srivastava (B.Arch, Vellore Institute of Technology, Vellore). Innovative, sustainable residential sanctuaries, cultural pavilions, and tectonic modernism across India.',
   keywords: [
     'Architecture',
-    'Contemporary Architect',
-    'Elena Vance',
-    'Sustainable Architecture',
-    'Modern Villa Design',
+    'Aayush Srivastava',
+    'VIT Vellore Architecture',
+    'B.Arch Portfolio',
+    'Contemporary Indian Architect',
+    'Sustainable Architecture India',
+    'Tropical Modernism',
     'Tectonic Architecture',
   ],
-  authors: [{ name: 'Elena Vance' }],
+  authors: [{ name: 'Aayush Srivastava' }],
   openGraph: {
-    title: 'Elena Vance — Architecture Atelier',
+    title: 'Aayush Srivastava — Architecture Portfolio',
     description:
-      'Innovative architecture atelier specializing in modern, sustainable, and tectonic designs.',
+      'Innovative architecture studio specializing in tropical modernism, tectonic mass, and sustainable bioclimatic designs across India.',
     type: 'website',
-    locale: 'en_US',
-    siteName: 'Elena Vance Architecture',
+    locale: 'en_IN',
+    siteName: 'Aayush Srivastava Architecture',
   },
 };
 

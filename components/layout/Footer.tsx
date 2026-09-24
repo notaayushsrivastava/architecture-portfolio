@@ -13,7 +13,7 @@ export function Footer() {
   // Use the latest commission project from data model
   const latestProject = projects[projects.length - 1] || projects[0];
 
-  // Local Zurich time state
+  // Local India (IST) time state
   const [timeStr, setTimeStr] = useState<string>('');
 
   useEffect(() => {
@@ -21,10 +21,10 @@ export function Footer() {
       const now = new Date();
       setTimeStr(
         now.toLocaleTimeString('en-GB', {
-          timeZone: 'Europe/Zurich',
+          timeZone: 'Asia/Kolkata',
           hour: '2-digit',
           minute: '2-digit',
-        }) + ' CET'
+        }) + ' IST'
       );
     };
     updateTime();
@@ -53,7 +53,7 @@ export function Footer() {
 
           <div className="hidden sm:flex items-center gap-2 text-xs font-mono text-neutral-400">
             <Clock className="w-3.5 h-3.5 text-neutral-500" />
-            <span>ZÜRICH ATELIER · {timeStr || '17:45 CET'}</span>
+            <span>INDIA ATELIER · {timeStr || '18:30 IST'}</span>
           </div>
         </div>
 
@@ -202,7 +202,7 @@ export function Footer() {
         {/* Giant Bottom Cropped Watermark Typography */}
         <div className="w-full select-none pointer-events-none mt-12 sm:mt-16 overflow-hidden">
           <div className="text-watermark font-black text-white/[0.04] leading-none uppercase tracking-tighter translate-y-6 sm:translate-y-12">
-            VALE
+            AAYUSH
           </div>
         </div>
       </Container>
