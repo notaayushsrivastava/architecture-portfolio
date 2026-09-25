@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowUpRight, Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { ArrowUpRight, Mail, Phone, MapPin, Clock, GraduationCap } from 'lucide-react';
 import { Container } from '@/components/layout/Container';
 import { studioInfo } from '@/data/studio';
 import { projects } from '@/data/projects';
@@ -43,17 +43,23 @@ export function Footer() {
     >
       <Container size="wide">
 
-        {/* Section Monospace Tag */}
-        <div className="flex items-center justify-between gap-3 text-mono-meta text-neutral-400 mb-12 sm:mb-16 border-b border-line-dark pb-6">
+        {/* Section Monospace Tag & Research Monograph Badge */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-mono-meta text-neutral-400 mb-12 sm:mb-16 border-b border-line-dark pb-6">
           <div className="flex items-center gap-3">
             <span className="font-bold text-white">07</span>
             <span className="text-neutral-600">──</span>
             <span className="tracking-widest text-neutral-300 uppercase">ATELIER DIRECTORY & INQUIRIES</span>
           </div>
 
-          <div className="hidden sm:flex items-center gap-2 text-xs font-mono text-neutral-400">
-            <Clock className="w-3.5 h-3.5 text-neutral-500" />
-            <span>INDIA ATELIER · {timeStr || '18:30 IST'}</span>
+          <div className="flex flex-wrap items-center gap-3 text-xs font-mono text-neutral-400">
+            <div className="flex items-center gap-1.5 text-emerald-400 bg-emerald-950/40 px-3 py-1 rounded-full border border-emerald-500/30">
+              <GraduationCap className="w-3.5 h-3.5" />
+              <span>ARCHITECTURAL MONOGRAPHS & RESEARCH</span>
+            </div>
+            <div className="flex items-center gap-2 text-neutral-300">
+              <Clock className="w-3.5 h-3.5 text-neutral-500" />
+              <span>INDIA ATELIER · {timeStr || '22:55 IST'}</span>
+            </div>
           </div>
         </div>
 
@@ -92,8 +98,11 @@ export function Footer() {
                 <h3 className="text-2xl sm:text-3xl font-bold tracking-tight text-white mb-3">
                   {latestProject.title}
                 </h3>
-                <p className="text-sm sm:text-base text-neutral-300 leading-relaxed max-w-xl mb-6 font-light">
+                <p className="text-sm sm:text-base text-neutral-300 leading-relaxed max-w-xl mb-4 font-light">
                   {latestProject.summary}
+                </p>
+                <p className="text-xs text-neutral-400 italic leading-relaxed max-w-xl mb-6 font-serif border-l-2 border-neutral-700 pl-3">
+                  &ldquo;Architecture articulates what prose implies: a continuous dialogue between the human scale, gravity, and the ambient climate.&rdquo;
                 </p>
               </div>
 
@@ -138,12 +147,23 @@ export function Footer() {
         {/* 1px Fine Line Divider */}
         <div className="w-full h-px bg-line-dark my-8" />
 
-        {/* Direct Atelier Contact Grid */}
+        {/* Direct Atelier Contact Grid with Inverted Scaled VIT Insignia */}
         <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-8 items-center text-xs text-neutral-400 py-6">
-          {/* Left Brand Identity */}
-          <div className="text-left font-mono uppercase tracking-widest text-white font-bold text-sm flex flex-col gap-1">
-            <span>{studioInfo.name}</span>
-            <span className="text-xs text-neutral-500 font-normal">{studioInfo.architect} · {studioInfo.credentials}</span>
+          {/* Left Brand Identity with Inverted VIT Logo positioned above and scaled to the text size */}
+          <div className="text-left font-mono uppercase tracking-widest text-white font-bold text-sm flex flex-col items-start gap-4">
+            <div className="relative w-52 sm:w-64 max-w-full flex items-center">
+              <Image
+                src="/vit.png"
+                alt="VIT Vellore Institute of Technology Logo"
+                width={260}
+                height={70}
+                className="w-full h-auto object-contain brightness-0 invert opacity-90 transition-opacity hover:opacity-100"
+              />
+            </div>
+            <div className="flex flex-col gap-1">
+              <span>{studioInfo.name}</span>
+              <span className="text-xs text-neutral-400 font-normal">{studioInfo.architect} · {studioInfo.credentials}</span>
+            </div>
           </div>
 
           {/* Center Direct Email & Phone Number */}
@@ -176,11 +196,17 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Lower Legal & Geographic Coordinates Row */}
+        {/* Lower Legal, Deployment Timestamp & Geographic Coordinates Row */}
         <div className="w-full flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] text-neutral-400 border-t border-line-dark/60 pt-8 mt-6 font-mono">
           <div>
             © {new Date().getFullYear()} {studioInfo.architect}. All Rights Reserved.
           </div>
+
+          {/* Explicit Deployment Timestamp */}
+          <div className="text-center px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-neutral-200">
+            DEPLOYED: <span className="font-semibold text-white">25-09-2026 at 10:55 pm</span>
+          </div>
+
           <div className="text-center">
             {studioInfo.address.street}, {studioInfo.address.city}, {studioInfo.address.country}
           </div>

@@ -60,6 +60,9 @@ export function FeaturedProjects() {
                   PROJECTS
                 </span>
               </h2>
+              <p className="text-xs sm:text-sm text-ink-muted mt-2 font-normal">
+                Curated monographs examining climate-responsive tectonics, structural rhythm, and material integrity across Indian terrains.
+              </p>
             </div>
 
             {/* Right 'Explore All' Button */}

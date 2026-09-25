@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Plus_Jakarta_Sans, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import { Navigation } from '@/components/layout/Navigation';
+import { UnimplementedModal } from '@/components/ui/UnimplementedModal';
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -52,6 +53,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-canvas text-ink-primary font-sans antialiased selection:bg-ink-primary selection:text-white">
         <Navigation />
         <main className="min-h-screen flex flex-col">{children}</main>
+        <UnimplementedModal />
       </body>
     </html>
   );

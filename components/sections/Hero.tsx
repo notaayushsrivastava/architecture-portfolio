@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, GraduationCap } from 'lucide-react';
 import { projects } from '@/data/projects';
 import { Badge } from '@/components/ui/Badge';
 
@@ -42,15 +42,16 @@ export function Hero() {
 
         {/* Top Floating Context Bar */}
         <div className="relative z-10 flex items-center justify-between w-full pt-1 sm:pt-2">
-          <div className="flex items-center gap-2 sm:gap-3 bg-black/30 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
+          <div className="flex items-center gap-2 sm:gap-3 bg-black/40 backdrop-blur-md px-3.5 py-1 rounded-full border border-white/10">
             <span className="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
             <span className="font-mono text-[10px] sm:text-xs uppercase tracking-widest text-neutral-200 font-medium">
-              FEATURED COMMISSION · 0{currentIndex + 1}/0{featuredProjects.length}
+              FEATURED MONOGRAPH · 0{currentIndex + 1}/0{featuredProjects.length}
             </span>
           </div>
 
-          <div className="hidden sm:flex items-center gap-3 text-xs font-mono text-neutral-300 bg-black/30 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
-            <span>{currentProject.location.coordinates}</span>
+          <div className="hidden sm:flex items-center gap-3 text-xs font-mono text-neutral-300 bg-black/40 backdrop-blur-md px-3.5 py-1 rounded-full border border-white/10">
+            <GraduationCap className="w-3.5 h-3.5 text-emerald-400" />
+            <span>VIT VELLORE · B.ARCH PORTFOLIO</span>
             <span className="text-neutral-500">·</span>
             <span>{currentProject.location.city}, {currentProject.location.country}</span>
           </div>
@@ -61,6 +62,9 @@ export function Hero() {
           <h1 className="text-display-hero text-white font-extrabold tracking-tight drop-shadow-md select-none max-w-5xl leading-[0.9] uppercase">
             {currentProject.title}
           </h1>
+          <p className="mt-3 text-xs sm:text-sm text-neutral-300 max-w-2xl font-light leading-relaxed hidden sm:block">
+            &ldquo;An investigation into tectonic permanence, regional microclimates, and experiential spatial poetry.&rdquo;
+          </p>
         </div>
 
         {/* Bottom Metadata & Interaction Bar */}
@@ -109,7 +113,7 @@ export function Hero() {
           aria-label="Scroll to Studio Introduction"
         >
           <span className="font-mono text-[10px] tracking-widest uppercase font-semibold text-neutral-400 group-hover:text-ink-primary transition-colors">
-            EXPLORE MONOGRAPH
+            EXPLORE ARCHITECTURAL MONOGRAPHS
           </span>
           <div className="w-5 h-8 rounded-full border border-neutral-300 group-hover:border-ink-primary flex items-start justify-center p-1 transition-colors">
             <div className="w-1 h-1.5 rounded-full bg-ink-primary animate-bounce" />

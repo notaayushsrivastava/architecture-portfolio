@@ -45,8 +45,8 @@ export const services: ServiceItem[] = [
     category: 'Floor Planing',
     description: 'Spatial layout optimization balancing circulation, vastu principles, sightlines, and uninterrupted framing of natural surroundings.',
     deliverables: ['Spatial Circulation Analysis', 'Axonometric Massing Studies', 'Tectonic Detail Blueprints'],
-    image: 'https://images.unsplash.com/photo-1577495508048-b635879837f1?q=80&w=1600&auto=format&fit=crop',
-    imageAlt: 'Architectural structural framework and facade fins',
+    image: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1600&auto=format&fit=crop',
+    imageAlt: 'Architectural structural framework and geometric facade fins',
     featuredProjectSlug: 'the-obsidian-pavilion',
   },
 ];

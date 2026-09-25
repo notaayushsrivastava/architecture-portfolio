@@ -77,15 +77,15 @@ export const projects: Project[] = [
     challenge: 'Shielding interior gallery spaces from extreme desert heat (45°C+ summer peaks) while admitting natural diffused daylight.',
     solution: 'Engineered a double-skinned porous sandstone facade with step-down sunken water courts that cool incoming ambient air via evaporative thermal siphoning.',
     heroImage: {
-      url: 'https://images.unsplash.com/photo-1577495508048-b635879837f1?q=80&w=1600&auto=format&fit=crop',
-      alt: 'Modern architectural building with terracotta fins and vertical louvers against blue sky',
+      url: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=1600&auto=format&fit=crop',
+      alt: 'Modern architectural pavilion building with geometric terracotta stone fins and vertical louvers',
       aspectRatio: '16/10',
       isHero: true,
     },
     gallery: [
       {
-        url: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1600&auto=format&fit=crop',
-        alt: 'Minimalist stone pavilion hovering above a silent water court',
+        url: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600&auto=format&fit=crop',
+        alt: 'Minimalist geometric stone facade and courtyard reflection',
         aspectRatio: '4/5',
       },
       {
@@ -210,8 +210,8 @@ export const projects: Project[] = [
     summary: 'Adaptive transformation of decommissioned industrial textile mill structures along the Sabarmati riverfront into an urban design laboratory, sculpture hall, and community maker space.',
     concept: 'Preserving the raw brick craftsmanship of Ahmedabad’s textile heritage while carving vertical daylight shafts and connecting galleries with suspended bridge walkways.',
     heroImage: {
-      url: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1600&auto=format&fit=crop',
-      alt: 'Minimalist architectural interior with natural timber beams and sculptural lighting',
+      url: 'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?q=80&w=1600&auto=format&fit=crop',
+      alt: 'Exposed red brick architectural building with deep arches and geometric masonry',
       aspectRatio: '1/1',
       isHero: true,
     },

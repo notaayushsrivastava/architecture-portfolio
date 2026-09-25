@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Container } from '@/components/layout/Container';
 import { projects } from '@/data/projects';
 import { Badge } from '@/components/ui/Badge';
@@ -30,11 +30,14 @@ export function ProjectArchive() {
           {/* Center Main Title */}
           <div className="lg:col-span-6">
             <h2 className="text-display-title font-extrabold tracking-tight text-ink-primary leading-[1.05]">
-              SOME OF OUR LATEST{' '}
+              MONOGRAPHS &amp;{' '}
               <span className="text-ink-two-tone font-semibold block sm:inline">
-                PROJECTS
+                BUILT ARCHIVE
               </span>
             </h2>
+            <p className="text-xs sm:text-sm text-ink-muted mt-2 font-normal">
+              Analytical design monographs exploring vernacular morphology, structural honesty, and adaptive reuse.
+            </p>
           </div>
 
           {/* Right Action Button */}

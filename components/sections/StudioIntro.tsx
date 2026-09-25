@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, BookOpen, Compass, Layers, Sun } from 'lucide-react';
 import { Container } from '@/components/layout/Container';
 import { studioStats, studioInfo } from '@/data/studio';
 
@@ -12,10 +12,16 @@ export function StudioIntro() {
         {/* Section Header & Strong Editorial Statement */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start mb-16 sm:mb-24">
           {/* Left Metadata Column: Section Tag */}
-          <div className="lg:col-span-3 flex items-center gap-3 text-mono-meta text-ink-primary pt-1 sm:pt-2">
-            <span className="font-bold">01</span>
-            <span className="text-neutral-300">──</span>
-            <span className="tracking-widest">ABOUT US</span>
+          <div className="lg:col-span-3 flex flex-col gap-2 pt-1 sm:pt-2">
+            <div className="flex items-center gap-3 text-mono-meta text-ink-primary">
+              <span className="font-bold">01</span>
+              <span className="text-neutral-300">──</span>
+              <span className="tracking-widest">ABOUT US</span>
+            </div>
+            <div className="inline-flex items-center gap-1.5 text-[10px] font-mono text-neutral-500 uppercase tracking-wider">
+              <BookOpen className="w-3 h-3 text-neutral-400" />
+              <span>English Architectural Treatise</span>
+            </div>
           </div>
 
           {/* Center Main Statement: Two-Tone Typography */}
@@ -40,6 +46,55 @@ export function StudioIntro() {
             >
               More About us
             </Link>
+          </div>
+        </div>
+
+        {/* Academic English Discourse on Architecture (Assignment Exposition) */}
+        <div className="mb-16 bg-canvas-surface border border-line-hairline rounded-3xl p-6 sm:p-10 lg:p-12 shadow-2xs">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div className="lg:col-span-4 border-b lg:border-b-0 lg:border-r border-line-hairline pb-6 lg:pb-0 lg:pr-8">
+              <span className="font-mono text-xs uppercase tracking-widest text-neutral-400 block mb-2">
+                ACADEMIC DISCOURSE · ESSAY THEME
+              </span>
+              <h3 className="text-xl sm:text-2xl font-bold text-ink-primary tracking-tight leading-snug">
+                The Semiotics of Space: Architecture as a Non-Verbal Language
+              </h3>
+              <p className="text-xs text-ink-muted mt-3 leading-relaxed">
+                Authored by Aayush Srivastava (B.Arch, Vellore Institute of Technology, Vellore).
+              </p>
+            </div>
+
+            <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs sm:text-sm text-ink-secondary leading-relaxed">
+              <div className="flex flex-col gap-2">
+                <div className="flex items-center gap-2 font-mono font-bold text-ink-primary uppercase tracking-wider text-xs">
+                  <Layers className="w-4 h-4 text-ink-primary" />
+                  <span>1. Tectonic Mass</span>
+                </div>
+                <p className="font-light">
+                  Architecture begins where structural necessity meets human emotion. The deliberate articulation of heavy basalt, stabilized rammed earth, and slender steel reveals how materials dialogue with gravity over decades.
+                </p>
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <div className="flex items-center gap-2 font-mono font-bold text-ink-primary uppercase tracking-wider text-xs">
+                  <Sun className="w-4 h-4 text-ink-primary" />
+                  <span>2. Bioclimatic Light</span>
+                </div>
+                <p className="font-light">
+                  Natural daylight is not merely an illuminant; it is a dynamic spatial sculpting instrument. Deep verandas, perforated jali screens, and sun-tracking light wells choreograph microclimates that eliminate artificial energy dependencies.
+                </p>
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <div className="flex items-center gap-2 font-mono font-bold text-ink-primary uppercase tracking-wider text-xs">
+                  <Compass className="w-4 h-4 text-ink-primary" />
+                  <span>3. Vernacular Context</span>
+                </div>
+                <p className="font-light">
+                  A building is an extension of its immediate terrain. By synthesizing regional Indian craftsmanship with contemporary tectonic minimalism, built spaces achieve cultural permanence without historical imitation.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
